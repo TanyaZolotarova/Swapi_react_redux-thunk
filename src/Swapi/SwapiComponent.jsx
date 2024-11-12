@@ -15,7 +15,7 @@ export function SwapiComponent() {
     const {data, loading, error} = useSelector((state) => state.swapi);
 
     function handleLoadData() {
-        if (query) dispatch(fetchSwapiData(query));
+        if (query.trim()) dispatch(fetchSwapiData(query));
     }
 
     function handleClearData() {
